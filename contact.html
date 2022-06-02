@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+
+<body id="body__register-page">
+  <!-- Header and navbar of the document -->
+
+  <header id="header">
+    <div class="logo-text">
+      <em>babboeCodes</em>
+
+      <ul class="header__list">
+        <li onmouseover="magic('left1')" class="list__item">
+          <a href="index.html">Home</a>
+        </li>
+        <li onmouseover="magic('left2')" class="list__item">
+          <a href="contact.html">Contact</a>
+        </li>
+        <li onmouseover="magic('left3')" class="list__item">
+          <a href="login.html">Login</a>
+        </li>
+        <li onmouseover="magic('left4')" class="list__item">
+          <a href="register.html">Register</a>
+        </li>
+        <li onmouseover="magic('left5')" class="list__item">
+          <a href="#cal">Calculator</a>
+        </li>
+      </ul>
+
+    </div>
+
+    <nav id="nav-bar">
+      <ul class="nav-bar__list">
+        <li onmouseover="magic('left1')" class="list__item">
+          <a href="index.html">Home</a>
+        </li>
+        <li onmouseover="magic('left2')" class="list__item">
+          <a href="contact.html">Contact</a>
+        </li>
+        <li onmouseover="magic('left3')" class="list__item">
+          <a href="login.html">Login</a>
+        </li>
+        <li onmouseover="magic('left4')" class="list__item">
+          <a href="register.html">Register</a>
+        </li>
+        <li onmouseover="magic('left5')" class="list__item">
+          <a href="#cal">Calculator</a>
+        </li>
+      </ul>
+
+      <div class="nav-bar__list--after left2"></div>
+
+      <img onclick="magic()" class="menu-btn" src="./icon-hamburger.svg" alt="" />
+    </nav>
+  </header>
+
+  <!-- Main content of the document -->
+
+  <main id="main">
+    <!-- contact me / reach out section -->
+
+    <section class="contact-me">
+      <div class="profile-picture contact-page__profile-picture">
+        <img src="./profile.jpg" alt="" class="profile-picture__img" />
+      </div>
+
+      <h1 class="h2--title contact-page__h1--title">Do you need my <br> Services 🛠️?</h1>
+      <p class="contact-me__paragraph contact-page__paragraph">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure
+        quaerat similique nulla. Voluptatum natus excepturi facere!
+        Reprehenderit optio eaque consequatur!
+      </p>
+
+      <!-- form creation -->
+
+      <form action="" class="contact-me__form">
+        <!-- name of user input -->
+        <label for="full-name">Name:</label>
+        <input type="text" name="full-name" id="full-name" placeholder="full name" required />
+
+        <!-- user Email input -->
+        <label for="user-email">Email:</label>
+        <input type="email" name="user-email" id="user-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          placeholder="Enter Your Email Address" required />
+
+        <!-- text area to drop message -->
+        <label for="text-area">Your Message</label>
+        <textarea name="text-area" id="text-area" cols="30" rows="10" placeholder="Enter your message"></textarea>
+
+        <!-- drop down option for message priority -->
+        <label for="priority"> Message Priority</label>
+        <select name="priority" id="priority">
+          <optgroup label="Choose Priority">
+            <option value="Critical" class="">Critical</option>
+            <option value="High" class="">High</option>
+            <option value="Normal" class="">Normal</option>
+          </optgroup>
+        </select>
+
+        <!-- submit form button -->
+        <input type="submit" value="Send Message" id="submit" />
+      </form>
+    </section>
+
+    <!-- calculator page link -->
+
+    <div class="h2--text">
+      <a href="Calculator.html" class="h2--text"> Check out my calculator here</a>
+    </div>
+  </main>
+
+  <!-- Footer content of the page -->
+  <footer id="footer">
+    <div class="logo-text"><em>babboeCodes</em></div>
+
+    <ul class="footer__contact-list">
+      <li class="contact-list__item">
+        <a href="https://github.com/babboe1">GitHub</a>
+      </li>
+      <li class="contact-list__item">
+        <a href="https://twitter.com/ausstinab">Twitter</a>
+      </li>
+      <li class="contact-list__item">
+        <a href="https://www.linkedin.com/in/abiola-ayodele-5a10651b7/">LinkedIn</a>
+      </li>
+      <li class="contact-list__item">
+        <a href="http://">Instagram</a>
+      </li>
+      <li class="contact-list__item">
+        <a href="http://">Facebook</a>
+      </li>
+    </ul>
+    <p class="attribution">@2022 coded by <em>babboeCodes</em>. AltSchool Africa</p>
+  </footer>
+
+  <!-- mini script -->
+  <script>
+    // script for header background color
+    const HEADER = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY < 20) {
+        HEADER.style.backgroundColor = ' rgb(7, 7, 7, 0.7)';
+      } else {
+        HEADER.style.backgroundColor = ' #4b4235';
+      }
+    });
+
+    // script for nav bar
+    const LINE = document.querySelector('.nav-bar__list--after');
+    function magic(value) {
+      LINE.className = 'nav-bar__list--after';
+      LINE.classList.add(`${value}`);
+      if (window.innerWidth < 768) {
+        document.querySelector('.header__list').style.display = 'flex';
+        document.querySelector('.menu-btn').style.display = 'none';
+      }
+    }
+  </script>
+</body>
+
+</html>
