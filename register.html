@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register Page</title>
+</head>
+<link type="text/css" rel="stylesheet" href="style.css" />
+
+<body id="body__register-page">
+  <!-- Header and navbar of the document -->
+
+  <header id="header">
+    <div class="logo-text">
+      <em>babboeCodes</em>
+
+      <ul class="header__list">
+        <li onmouseover="magic('left1')" class="list__item">
+          <a href="index.html">Home</a>
+        </li>
+        <li onmouseover="magic('left2')" class="list__item">
+          <a href="contact.html">Contact</a>
+        </li>
+        <li onmouseover="magic('left3')" class="list__item">
+          <a href="login.html">Login</a>
+        </li>
+        <li onmouseover="magic('left4')" class="list__item">
+          <a href="register.html">Register</a>
+        </li>
+        <li onmouseover="magic('left5')" class="list__item">
+          <a href="#cal">Calculator</a>
+        </li>
+      </ul>
+    </div>
+
+    <nav id="nav-bar">
+      <ul class="nav-bar__list">
+        <li onmouseover="magic('left1')" class="list__item">
+          <a href="index.html">Home</a>
+        </li>
+        <li onmouseover="magic('left2')" class="list__item">
+          <a href="contact.html">Contact</a>
+        </li>
+        <li onmouseover="magic('left3')" class="list__item">
+          <a href="login.html">Login</a>
+        </li>
+        <li onmouseover="magic('left4')" class="list__item">
+          <a href="register.html">Register</a>
+        </li>
+        <li onmouseover="magic('left5')" class="list__item">
+          <a href="#cal">Calculator</a>
+        </li>
+      </ul>
+
+      <div class="nav-bar__list--after left4"></div>
+
+      <img onclick="magic()" class="menu-btn" src="./icon-hamburger.svg" alt="" />
+    </nav>
+  </header>
+
+  <!-- Main content of the document -->
+  <main id="main">
+    <section class="register-section">
+      <h1 class="h1--title">
+        Don't have an Account? <br />
+        Sign up
+      </h1>
+
+      <!-- register form creation -->
+      <form action="" method="post" class="register__form">
+        <!-- User full name -->
+        <label for="first-name">First Name</label>
+        <input type="text" name="first-name" id="first-name" pattern="[A-Za-z]" placeholder="Enter your First Name"
+          required />
+
+        <label for="middle-name">Middle Name</label>
+        <input type="text" name="middle-name" id="middle-name" placeholder="Enter your Middle Name"
+          pattern="[A-Za-z]" />
+
+        <label for="last-name">Last Name</label>
+        <input type="text" name="first-name" id="last-name" pattern="[A-Za-z]" placeholder="Enter your Last Name"
+          required />
+
+        <!-- User Phone number -->
+        <label for="phone-number">Phone Number</label>
+        <input type="number" name="phone" id="phone-number" placeholder="+234" required />
+
+        <!-- drop down option for user gender -->
+        <label for="user-gender"> Gender</label>
+        <select name="user-gender" id="user-gender" required>
+          <option value="gender" disabled selected>
+            Select Gender
+          </option>
+          <option value="male" class="">Male</option>
+          <option value="female" class="">Female</option>
+          <option value="Normal" class="">Don't say</option>
+        </select>
+
+        <!-- input for user country -->
+        <label for="user-country">Country</label>
+        <input type="text" name="user-country" id="user-country" pattern="[A-Za-z]" placeholder="Enter your Country"
+          required />
+
+        <label for="user-province">State/Province</label>
+        <input type="text" name="user-province" id="user-province" pattern="[A-Za-z]"
+          placeholder="Enter your State/Province" required />
+
+        <!-- input for username -->
+        <label for="username">UserName:</label>
+        <input type="text" name="full-name" id="username" placeholder="Enter your Username" required />
+
+        <!-- user password input -->
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" placeholder="Enter Your Password"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+          required />
+        <!-- submit form button -->
+        <input type="submit" value="Complete Registration" id="submit" />
+
+        <a class="h3--text" href="login.html">Already have an account? <br />
+          Login here!
+        </a>
+      </form>
+    </section>
+
+    <!-- calculator page link -->
+
+    <div class="h2--text">
+      <a href="Calculator.html" class="h2--text" id="cal">
+        Check out my calculator here</a>
+    </div>
+  </main>
+
+  <!-- Footer content of the page -->
+  <footer id="footer">
+    <div class="logo-text"><em>babboeCodes</em></div>
+
+    <ul class="footer__contact-list">
+      <li class="contact-list__item">
+        <a href="https://github.com/babboe1">GitHub</a>
+      </li>
+      <li class="contact-list__item">
+        <a href="https://twitter.com/ausstinab">Twitter</a>
+      </li>
+      <li class="contact-list__item">
+        <a href="https://www.linkedin.com/in/abiola-ayodele-5a10651b7/">LinkedIn</a>
+      </li>
+      <li class="contact-list__item">
+        <a href="http://">Instagram</a>
+      </li>
+      <li class="contact-list__item">
+        <a href="http://">Facebook</a>
+      </li>
+    </ul>
+    <p class="attribution">
+      @2022 coded by <em>babboeCodes</em>. AltSchool Africa
+    </p>
+  </footer>
+
+  <!-- mini script -->
+  <script>
+    // script for header background color
+    const HEADER = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY < 20) {
+        HEADER.style.backgroundColor = ' rgb(7, 7, 7, 0.7)';
+      } else {
+        HEADER.style.backgroundColor = ' #4b4235';
+      }
+    });
+
+    // script for nav bar
+    const LINE = document.querySelector('.nav-bar__list--after');
+    function magic(value) {
+      LINE.className = 'nav-bar__list--after';
+      LINE.classList.add(`${value}`);
+      if (window.innerWidth < 768) {
+        document.querySelector('.header__list').style.display = 'flex';
+        document.querySelector('.menu-btn').style.display = 'none';
+      }
+    }
+  </script>
+</body>
+
+</html>
