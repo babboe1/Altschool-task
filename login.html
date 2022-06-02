@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>login</title>
+</head>
+<link type="text/css" rel="stylesheet" href="style.css" />
+
+<body id="body__register-page">
+  <!-- Header and navbar of the document -->
+
+  <header id="header">
+    <div class="logo-text">
+      <em>babboeCodes</em>
+
+      <ul class="header__list">
+        <li onmouseover="magic('left1')" class="list__item">
+          <a href="index.html">Home</a>
+        </li>
+        <li onmouseover="magic('left2')" class="list__item">
+          <a href="contact.html">Contact</a>
+        </li>
+        <li onmouseover="magic('left3')" class="list__item">
+          <a href="login.html">Login</a>
+        </li>
+        <li onmouseover="magic('left4')" class="list__item">
+          <a href="register.html">Register</a>
+        </li>
+        <li onmouseover="magic('left5')" class="list__item">
+          <a href="#cal">Calculator</a>
+        </li>
+      </ul>
+
+    </div>
+
+    <nav id="nav-bar">
+      <ul class="nav-bar__list">
+        <li onmouseover="magic('left1')" class="list__item">
+          <a href="index.html">Home</a>
+        </li>
+        <li onmouseover="magic('left2')" class="list__item">
+          <a href="contact.html">Contact</a>
+        </li>
+        <li onmouseover="magic('left3')" class="list__item">
+          <a href="login.html">Login</a>
+        </li>
+        <li onmouseover="magic('left4')" class="list__item">
+          <a href="register.html">Register</a>
+        </li>
+        <li onmouseover="magic('left5')" class="list__item">
+          <a href="#cal">Calculator</a>
+        </li>
+      </ul>
+
+      <div class="nav-bar__list--after left3"></div>
+
+      <img onclick="magic()" class="menu-btn" src="./icon-hamburger.svg" alt="" />
+    </nav>
+  </header>
+
+  <!-- Main content of the document -->
+  <main id="main">
+    <!-- contact me / reach out section -->
+    <section class="login-sectiom">
+      <h1 class="h1--title login-page__h1--title">
+        Login to you <br />
+        account
+      </h1>
+
+      <!-- Login form creation -->
+      <form action="" class="login-section__form">
+        <!-- name of user input -->
+        <label for="username">UserName:</label>
+        <input type="text" name="username" id="username" placeholder="Enter your Username" required />
+
+        <!-- user password input -->
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" placeholder="Enter Your Password"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+          required />
+        <!-- submit form button -->
+        <input type="submit" value="Login In" id="submit" />
+
+        <a class="h3--text" href="register.html">Don't have an account? <br />
+          Sign up here!
+        </a>
+      </form>
+    </section>
+
+    <!-- calculator page link -->
+
+    <div class="h2--text">
+      <a href="Calculator.html" class="h2--text"> Check out my calculator here</a>
+    </div>
+  </main>
+
+  <!-- Footer content of the page -->
+  <footer id="footer">
+    <div class="logo-text"><em>babboeCodes</em></div>
+
+    <ul class="footer__contact-list">
+      <li class="contact-list__item">
+        <a href="https://github.com/babboe1">GitHub</a>
+      </li>
+      <li class="contact-list__item">
+        <a href="https://twitter.com/ausstinab">Twitter</a>
+      </li>
+      <li class="contact-list__item">
+        <a href="https://www.linkedin.com/in/abiola-ayodele-5a10651b7/">LinkedIn</a>
+      </li>
+      <li class="contact-list__item">
+        <a href="http://">Instagram</a>
+      </li>
+      <li class="contact-list__item">
+        <a href="http://">Facebook</a>
+      </li>
+    </ul>
+    <p class="attribution">
+      @2022 coded by <em>babboeCodes</em>. AltSchool Africa
+    </p>
+  </footer>
+
+  <!-- mini script -->
+  <script>
+    // script for header background color
+    const HEADER = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY < 20) {
+        HEADER.style.backgroundColor = ' rgb(7, 7, 7, 0.7)';
+      } else {
+        HEADER.style.backgroundColor = ' #4b4235';
+      }
+    });
+
+    // script for nav bar
+    const LINE = document.querySelector('.nav-bar__list--after');
+    function magic(value) {
+      LINE.className = 'nav-bar__list--after';
+      LINE.classList.add(`${value}`);
+      if (window.innerWidth < 768) {
+        document.querySelector('.header__list').style.display = 'flex';
+        document.querySelector('.menu-btn').style.display = 'none';
+      }
+    }
+  </script>
+</body>
+
+</html>
