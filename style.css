@@ -1,0 +1,521 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	background: white;
+}
+body {
+	width: 100%;
+	max-width: 1440px;
+	margin: auto;
+	font-family: 'poppins', sans-serif;
+	background: url(hero-image-mobile.jpg);
+	background-size: 100% 42rem;
+	background-repeat: no-repeat;
+  box-shadow: 1px -3px 301px 20px rgba(224,144,206,0.7);
+-webkit-box-shadow: 1px -3px 301px 20px rgba(224,144,206,0.7);
+-moz-box-shadow: 1px -3px 301px 20px rgba(224,144,206,0.7);
+}
+
+/* styles for the header section */
+#header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0rem 1rem;
+	background-color: rgb(7, 7, 7, 0.7);
+	position: sticky;
+	top: 0;
+	width: 100%;
+	transition: 1s;
+   overflow: hidden;
+}
+
+.logo-text {
+	font-weight: bold;
+	font-size: 25px;
+	color: rgb(223, 192, 20);
+}
+
+.header__list {
+	list-style: none;
+	display: none;
+	font-size: 14px;
+	column-gap: 1rem;
+	padding-top: 1rem;
+	animation: fade-in 1s forwards;
+   overflow: hidden;
+}
+
+@keyframes fade-in {
+	0% {
+		transform: translateY(-2rem);
+		opacity: 0;
+	}
+	75% {
+		opacity: 0.8;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.header__list a {
+	text-decoration: none;
+	color: rgb(223, 192, 20);
+}
+
+.nav-bar__list {
+	list-style: none;
+	display: none;
+}
+
+.nav-bar__list--after {
+	height: 10px;
+	width: 3.5rem;
+	position: relative;
+	border-bottom: 3px solid white;
+	border-radius: 20px;
+	left: 10px;
+	transition: 0.5s;
+	display: none;
+}
+
+.left1 {
+	width: 3.5rem;
+	left: 10px;
+}
+
+.left2 {
+	width: 5rem;
+	left: 5rem;
+}
+
+.left3 {
+	width: 3.5rem;
+	left: 10.5rem;
+}
+
+.left4 {
+	width: 5rem;
+	left: 15rem;
+}
+
+.left5 {
+	width: 5.4rem;
+	left: 21rem;
+}
+/* style for the main section */
+#main {
+	padding: 0 2rem 4rem;
+	text-align: center;
+	color: black;
+}
+
+/* styles for the hero section */
+.hero-section {
+	padding: 4rem 0 5rem;
+}
+
+.profile-picture {
+	width: 100%;
+	max-width: 250px;
+	margin: 0 auto;
+}
+
+.profile-picture__img {
+	width: 100%;
+	border-radius: 50%;
+}
+
+.h1--title {
+	color: rgb(233, 202, 27);
+	font-size: 45px;
+	font-weight: 900;
+	padding: 2rem 0 5rem;
+}
+
+/* General styles for sections */
+.h2--text,
+.h2--title {
+	padding: 5rem 0 2rem;
+	font-size: 30px;
+	color: #714303;
+}
+
+.hero-section__summary,
+.my-goals__paragraph,
+.contact-me__paragraph {
+	font-size: 18px;
+	line-height: 25px;
+   width: 100%;
+   max-width: 60rem;
+   margin: auto;
+}
+
+.h3--text {
+	font-size: 22px;
+	padding: 1rem 0;
+}
+
+input {
+	padding: 0 1.5rem;
+}
+
+/* education section paragraph styles */
+.education__paragraph {
+	font-size: 15px;
+	font-weight: 300;
+}
+
+.job-experience__list {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
+	font-weight: 700;
+}
+
+/* activities and hobby style */
+.hobby__paragraph {
+	font-size: 15px;
+	padding: 1rem 0;
+}
+
+/* style for contact me page and form creation */
+.contact-me__form,
+.login-section__form,
+.register__form {
+	padding: 4rem 0 0;
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
+}
+
+#full-name,
+#user-email,
+/* login input style */
+#username,
+#password {
+	height: 2rem;
+	border-radius: 20px;
+	border-color: rgb(233, 202, 27);
+	background-color: rgba(240, 231, 184, 0.2);
+	width: 100%;
+	max-width: 20rem;
+	margin: 0 auto;
+}
+
+#text-area {
+	resize: none;
+	background-color: rgba(247, 218, 76, 0.2);
+	width: 100%;
+	max-width: 25rem;
+	margin: 0 auto;
+}
+
+#priority,
+#user-gender {
+	height: 2.5rem;
+	width: 10rem;
+	margin: auto;
+	text-align: center;
+	border-radius: 15px;
+}
+
+#submit {
+	height: 3rem;
+	width: 12rem;
+	margin: auto;
+}
+
+/* stye for footer content */
+#footer {
+	background: rgb(75, 75, 75);
+	background: linear-gradient(
+		46deg,
+		rgba(75, 75, 75, 1) 0%,
+		rgba(38, 38, 38, 1) 97%,
+		rgba(180, 180, 180, 1) 100%,
+		rgba(180, 180, 180, 1) 100%
+	);
+	color: white;
+	padding: 2rem 1rem;
+	text-align: center;
+   overflow: hidden;
+}
+
+.logo-text {
+	font-size: 35px;
+	padding: 1rem 0 2rem;
+	text-align: start;
+}
+
+.footer__contact-list {
+	display: flex;
+	list-style: none;
+	column-gap: 1rem;
+	justify-content: center;
+	padding-bottom: 2rem;
+}
+
+.contact-list__item a {
+	color: rgb(252, 245, 205);
+}
+
+.attribution {
+	font-size: 12px;
+}
+
+/* contact me page and Login page additional styles */
+.contact-page__h1--title,
+.login-page__h1--title {
+	color: rgb(219, 163, 8);
+	font-size: 45px;
+	font-weight: 900;
+}
+
+.contact-page__paragraph {
+	padding: 4rem 0 1rem;
+}
+
+.contact-page__profile-picture {
+	padding: 3rem 0 0;
+}
+
+/* style for login page form */
+.login-section__form {
+	color: rgb(219, 163, 8);
+	font-weight: 900;
+	font-size: 2rem;
+}
+
+/* style for Registration page  */
+#body__register-page {
+	background: url(./hero-image-mobile.jpg);
+	background-size: 100% 25rem;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+form input:not(#submit) {
+	height: 2rem;
+	border-radius: 20px;
+	border-color: rgb(233, 202, 27);
+	background-color: rgba(240, 231, 184, 0.2);
+	width: 100%;
+	max-width: 20rem;
+	margin: 0 auto;
+}
+
+/* Calculator using HTML Tables style */
+#body-content__calculator {
+	background: #eaebec;
+}
+.container--table {
+	margin: auto;
+	width: 18rem;
+	padding: 10px;
+	border: 1px solid #f2f2f2;
+	-webkit-box-shadow: 1px 1px 4px 0px rgba(176, 176, 176, 1);
+	-moz-box-shadow: 1px 1px 4px 0px rgba(176, 176, 176, 1);
+	box-shadow: 1px 1px 4px 0px rgba(176, 176, 176, 1);
+	background-color: #f8f8f8;
+}
+.container__header {
+	background-color: #81c784;
+	padding: 10px;
+	color: #fff;
+	text-align: center;
+}
+table {
+	width: 100%;
+}
+td {
+	width: 25%;
+}
+.result {
+	font-size: 24px;
+	padding: 16px 5px;
+	font-weight: 700;
+	text-align: right;
+	width: 96%;
+	background-color: #f8f8f8;
+  border: 1px solid #dcd8d8;
+  margin: 1rem 0;
+}
+.global {
+	padding: 15px;
+	font-weight: bold;
+	font-size: 16px;
+	border: none;
+	border-radius: 3px;
+	background-color: #f2f2f2;
+	width: 100%;
+}
+/*the global class padding reset for first-row class button*/
+.first-row {
+	padding: 7px;
+}
+.plus {
+	height: 105px;
+}
+.green {
+	background-color: #81c784;
+}
+.red {
+	background-color: #f50258;
+}
+.grey {
+	background-color: #f2f2f2;
+}
+.white-text {
+	color: #fff;
+}
+
+/* calculator using CSS flexbox style */
+.container--flex {
+	width: 100%;
+	max-width: 400px;
+	margin: auto;
+}
+
+.calc-body {
+	width: 275px;
+	margin: auto;
+	min-height: 400px;
+	border: solid 1px #3a4655;
+	box-shadow: 0 8px 50px -7px black;
+}
+
+.calc-screen {
+	background: #3a4655;
+	width: 100%;
+	height: 150px;
+	padding: 20px;
+}
+
+.calc-operation {
+	text-align: right;
+	color: #727b86;
+	font-size: 21px;
+	padding-bottom: 10px;
+	border-bottom: dotted 1px;
+}
+
+.calc-typed {
+	margin-top: 20px;
+	font-size: 45px;
+	text-align: right;
+	color: #fff;
+}
+
+.calc-button-row {
+	width: 100%;
+	background: #3c4857;
+}
+
+.button {
+	width: 25%;
+	background: #425062;
+	color: #fff;
+	padding: 20px;
+	display: inline-block;
+	font-size: 25px;
+	text-align: center;
+	vertical-align: middle;
+	margin-right: -4px;
+	border-right: solid 2px #3c4857;
+	border-bottom: solid 2px #3c4857;
+	transition: all 0.2s ease-in-out;
+}
+
+.button.l {
+	color: #aeb3ba;
+	background: #404d5e;
+}
+
+.button.c {
+	color: #d95d4e;
+	background: #404d5e;
+}
+
+.button:hover {
+	background: #e0b612;
+	transform: rotate(5deg);
+}
+
+.button.c:hover,
+.button.l:hover {
+	background: #e0b612;
+	color: #fff;
+}
+
+.blink-me {
+	color: #e0b612;
+}
+
+/* style for media query  */
+
+@media screen and (min-width: 768px) {
+	body {
+		background: url(./hero-image.jpg);
+		background-size: 60rem 38rem;
+		background-repeat: no-repeat;
+	}
+	.contact-me__form,
+	.login-section__form,
+	.register__form {
+		padding: 8rem 0 0;
+	}
+
+	.nav-bar__list {
+		list-style: none;
+		display: flex;
+		margin: 0 auto;
+		flex-direction: row;
+	}
+
+	.nav-bar__list .list__item a {
+		text-decoration: none;
+		color: rgb(223, 192, 20);
+		padding: 1rem;
+	}
+
+	.menu-btn,
+	.header__list {
+		display: none;
+	}
+	.nav-bar__list--after {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	body {
+		background: url(./hero-image.jpg);
+		background-size: 100% 38rem;
+		background-repeat: no-repeat;
+	}
+	.contact-me__form,
+	.login-section__form,
+	.register__form {
+		padding: 8rem 0 0;
+	}
+
+	#body__register-page {
+		background: url(./hero-image.jpg);
+		background-size: 100% 28rem;
+		background-repeat: no-repeat;
+		text-align: center;
+	}
+
+	.contact-me__form,
+	.login-section__form,
+	.register__form {
+		padding: 10rem 0 0;
+	}
+}
