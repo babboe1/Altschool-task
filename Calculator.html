@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Calculator</title>
+		<link type="text/css" rel="stylesheet" href="style.css" />
+	</head>
+	<body id="body-content__calculator">
+		<!-- Header and navbar of the document -->
+
+		<header id="header">
+			<div class="logo-text">
+            <em>babboeCodes</em>
+
+            <ul class="header__list">
+					<li onmouseover="magic('left1')" class="list__item">
+						<a href="index.html">Home</a>
+					</li>
+					<li onmouseover="magic('left2')" class="list__item">
+						<a href="contact.html">Contact</a>
+					</li>
+					<li onmouseover="magic('left3')" class="list__item">
+						<a href="login.html">Login</a>
+					</li>
+					<li onmouseover="magic('left4')" class="list__item">
+						<a href="register.html">Register</a>
+					</li>
+					<li onmouseover="magic('left5')" class="list__item">
+						<a href="#cal">Calculator</a>
+					</li>
+				</ul>
+
+         </div>
+
+			<nav id="nav-bar">
+				<ul class="nav-bar__list">
+					<li onmouseover="magic('left1')" class="list__item">
+						<a href="index.html">Home</a>
+					</li>
+					<li onmouseover="magic('left2')" class="list__item">
+						<a href="contact.html">Contact</a>
+					</li>
+					<li onmouseover="magic('left3')" class="list__item">
+						<a href="login.html">Login</a>
+					</li>
+					<li onmouseover="magic('left4')" class="list__item">
+						<a href="register.html">Register</a>
+					</li>
+					<li onmouseover="magic('left5')" class="list__item">
+						<a href="#cal">Calculator</a>
+					</li>
+				</ul>
+
+				<div class="nav-bar__list--after"></div>
+
+				<img onclick="magic()" class="menu-btn" src="./icon-hamburger.svg" alt="" />
+			</nav>
+		</header>
+
+		<!-- Main content of the document -->
+		<main id="main">
+			<!-- Calculator Layout design using HTML tables -->
+			<section class="">
+				<h2 class="h2--text">Calculator Layout design using HTML tables</h2>
+
+				<div class="container--table">
+					<div class="container__header">Calculator</div>
+					<input type="text" class="result" />
+					<table>
+						<tr>
+							<td>
+								<input
+									type="button"
+									value="&radic;"
+									class="global first-row"
+								/>
+							</td>
+							<td>
+								<input
+									type="button"
+									value="("
+									class="global first-row"
+								/>
+							</td>
+							<td>
+								<input
+									type="button"
+									value=")"
+									class="global first-row"
+								/>
+							</td>
+							<td>
+								<input
+									type="button"
+									value="%"
+									class="global first-row"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="button" value="7" class="global" /></td>
+							<td><input type="button" value="8" class="global" /></td>
+							<td><input type="button" value="9" class="global" /></td>
+							<td><input type="button" value="/" class="global" /></td>
+						</tr>
+						<tr>
+							<td><input type="button" value="4" class="global" /></td>
+							<td><input type="button" value="5" class="global" /></td>
+							<td><input type="button" value="6" class="global" /></td>
+							<td><input type="button" value="X" class="global" /></td>
+						</tr>
+						<tr>
+							<td><input type="button" value="1" class="global" /></td>
+							<td><input type="button" value="2" class="global" /></td>
+							<td><input type="button" value="3" class="global" /></td>
+							<td><input type="button" value="-" class="global" /></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<input type="button" value="0" class="global grey" />
+							</td>
+							<td><input type="button" value="." class="global" /></td>
+							<td rowspan="2">
+								<input type="button" value="+" class="global plus" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input
+									type="button"
+									value="Del"
+									class="global red white-text"
+								/>
+							</td>
+							<td colspan="2">
+								<input
+									type="button"
+									value="="
+									class="global green white-text"
+								/>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+
+			<!-- Calculator Layout design using CSS Flex box -->
+			<section class="">
+				<h2 class="h2--text">Calculator Layout design using CSS Flexbox</h2>
+				<div class="container--flex">
+					<div class="calc-body">
+						<div class="calc-screen">
+							<div class="calc-operation">2536 + 419 +</div>
+							<div class="calc-typed">
+								2955<span class="blink-me">_</span>
+							</div>
+						</div>
+						<div class="calc-button-row">
+							<div class="button c">C</div>
+							<div class="button l">≠</div>
+							<div class="button l">%</div>
+							<div class="button l">/</div>
+						</div>
+						<div class="calc-button-row">
+							<div class="button">7</div>
+							<div class="button">8</div>
+							<div class="button">9</div>
+							<div class="button l">x</div>
+						</div>
+						<div class="calc-button-row">
+							<div class="button">4</div>
+							<div class="button">5</div>
+							<div class="button">6</div>
+							<div class="button l">−</div>
+						</div>
+						<div class="calc-button-row">
+							<div class="button">1</div>
+							<div class="button">2</div>
+							<div class="button">3</div>
+							<div class="button l">+</div>
+						</div>
+						<div class="calc-button-row">
+							<div class="button">.</div>
+							<div class="button">0</div>
+							<div class="button"><</div>
+							<div class="button l">=</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer content of the page -->
+		<footer id="footer">
+			<div class="logo-text"><em>babboeCodes</em></div>
+
+			<ul class="footer__contact-list">
+				<li class="contact-list__item">
+					<a href="https://github.com/babboe1">GitHub</a>
+				</li>
+				<li class="contact-list__item">
+					<a href="https://twitter.com/ausstinab">Twitter</a>
+				</li>
+				<li class="contact-list__item">
+					<a href="https://www.linkedin.com/in/abiola-ayodele-5a10651b7/"
+						>LinkedIn</a
+					>
+				</li>
+				<li class="contact-list__item">
+					<a href="http://">Instagram</a>
+				</li>
+				<li class="contact-list__item">
+					<a href="http://">Facebook</a>
+				</li>
+			</ul>
+			<p class="attribution">
+				@2022 coded by <em>babboeCodes</em>. AltSchool Africa
+			</p>
+		</footer>
+
+		<script>
+			// script for header background color
+			const HEADER = document.getElementById('header');
+			window.addEventListener('scroll', () => {
+				if (window.scrollY < 20) {
+					HEADER.style.backgroundColor = ' rgb(7, 7, 7, 0.7)';
+				} else {
+					HEADER.style.backgroundColor = ' #4b4235';
+				}
+			});
+
+			// script for nav bar
+			const LINE = document.querySelector('.nav-bar__list--after');
+			function magic(value) {
+				LINE.className = 'nav-bar__list--after';
+				LINE.classList.add(`${value}`);
+            if (window.innerWidth < 768) {
+               document.querySelector('.header__list').style.display = 'flex';
+            document.querySelector('.menu-btn').style.display = 'none';
+            }
+			}
+		</script>
+	</body>
+</html>
